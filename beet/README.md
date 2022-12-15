@@ -163,7 +163,7 @@ const [deserializedTrader] = Trader.struct.deserialize(buf)
 ```ts
 import * as web3 from '@solana/web3.js'
 import * as beet from '@metaplex-foundation/beet'
-import * as beetSolana from '@metaplex-foundation/beet-solana'
+import * as beetSolana from '@metaplex-solarti/beet-solana'
 
 type InstructionArgs = {
   instructionDiscriminator: number[]

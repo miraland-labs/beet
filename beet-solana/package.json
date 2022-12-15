@@ -1,6 +1,6 @@
 {
   "name": "@metaplex-solarti/beet-solana",
-  "version": "0.4.0-rc.2",
+  "version": "0.4.0-rc.3",
   "description": "Solarti adapted from Solana specific extension for beet, the borsh compatible de/serializer",
   "sideEffects": false,
   "main": "dist/cjs/src/beet-solana.js",

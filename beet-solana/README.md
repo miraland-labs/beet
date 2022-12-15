@@ -1,4 +1,4 @@
-# @metaplex-foundation/beet-solana
+# @metaplex-solarti/beet-solana
 
 Solana specific extension for beet, the borsh compatible de/serializer
 
@@ -111,7 +111,7 @@ They can either be used directly or as part of a struct.
 #### Using PublicKey Directly
 
 ```ts
-import { publicKey } from '@metaplex-foundation/beet-solana'
+import { publicKey } from '@metaplex-solarti/beet-solana'
 
 const generatedKey  = Keypair.generate().publicKey
 const buf = Buffer.alloc(publicKey.byteSize)
@@ -124,7 +124,7 @@ beet.read(buf, 0) // same as generatedKey
 ```ts
 import * as web3 from '@solarti/web3.js'
 import * as beet from '@metaplex-foundation/beet'
-import * as beetSolana from '@metaplex-foundation/beet-solana'
+import * as beetSolana from '@metaplex-solarti/beet-solana'
 
 type InstructionArgs = {
   authority: web3.PublicKey
