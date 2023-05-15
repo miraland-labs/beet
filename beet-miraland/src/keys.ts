@@ -3,7 +3,7 @@ import {
   FixedSizeBeet,
   fixedSizeUint8Array,
   SupportedTypeDefinition,
-} from '@metaplex-foundation/beet'
+} from '@miraplex/beet'
 const BEET_SOLANA_PACKAGE = '@metaplex-solarti/beet-solana'
 const SOLANA_WEB3_PACKAGE = '@solarti/web3.js'
 

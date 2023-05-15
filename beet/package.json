@@ -1,5 +1,5 @@
 {
-  "name": "@metaplex-foundation/beet",
+  "name": "@miraplex/beet",
   "version": "0.7.1",
   "description": "Strict borsh compatible de/serializer",
   "sideEffects": false,
@@ -21,7 +21,7 @@
     "doc": "rimraf ../docs/beet && typedoc",
     "doctoc": "doctoc README.md"
   },
-  "repository": "git@github.com:metaplex-foundation/beet.git",
+  "repository": "git@github.com:miraland-labs/beet.git",
   "author": "Thorsten Lorenz <thlorenz@gmx.de>",
   "license": "Apache-2.0",
   "directories": {

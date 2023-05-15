@@ -5,7 +5,7 @@ import {
   FixableBeetStruct,
   FixedSizeBeet,
   isFixedSizeBeet,
-} from '@metaplex-foundation/beet'
+} from '@miraplex/beet'
 import {
   Connection,
   GetProgramAccountsConfig,

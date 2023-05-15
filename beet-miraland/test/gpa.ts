@@ -1,7 +1,7 @@
 import test from 'tape'
 import spok from 'spok'
-import { BeetStruct } from '@metaplex-foundation/beet'
-import { u8 } from '@metaplex-foundation/beet'
+import { BeetStruct } from '@miraplex/beet'
+import { u8 } from '@miraplex/beet'
 import {
   IntAndString,
   PROGRAM_ID,
@@ -9,7 +9,7 @@ import {
   stringFilter,
   withDecodedBytes,
 } from './utils'
-import { GpaBuilder } from '../src/beet-solana'
+import { GpaBuilder } from '../src/beet-miraland'
 
 test('gpa: fixed struct with one u8', (t) => {
   type Args = {

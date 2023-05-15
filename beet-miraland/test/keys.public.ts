@@ -1,6 +1,6 @@
-import { FixedSizeBeet } from '@metaplex-foundation/beet'
+import { FixedSizeBeet } from '@miraplex/beet'
 import { PublicKey, Keypair } from '@solarti/web3.js'
-import { publicKey } from '../src/beet-solana'
+import { publicKey } from '../src/beet-miraland'
 import test from 'tape'
 
 function checkCases(

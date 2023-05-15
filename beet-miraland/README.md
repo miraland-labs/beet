@@ -123,7 +123,7 @@ beet.read(buf, 0) // same as generatedKey
 
 ```ts
 import * as web3 from '@solarti/web3.js'
-import * as beet from '@metaplex-foundation/beet'
+import * as beet from '@miraplex/beet'
 import * as beetSolana from '@metaplex-solarti/beet-solana'
 
 type InstructionArgs = {
