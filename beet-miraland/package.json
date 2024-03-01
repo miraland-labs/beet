@@ -1,6 +1,6 @@
 {
   "name": "@miraplex/beet-miraland",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "Miraland specific extension for beet, the borsh compatible de/serializer",
   "sideEffects": false,
   "main": "dist/cjs/src/beet-miraland.js",
@@ -18,7 +18,7 @@
     "lint:fix": "prettier --write ./src",
     "doc": "rimraf ../docs/beet-miraland && typedoc"
   },
-  "repository": "git@github.com:miraland-labs/beet.git",
+  "repository": "https://github.com/miraland-labs/beet",
   "author": "Thorsten Lorenz <thlorenz@gmx.de>",
   "license": "Apache-2.0",
   "directories": {

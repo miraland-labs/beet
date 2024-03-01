@@ -14,8 +14,8 @@
       "beet-miraland"
     ]
   },
-  "author": "Metaplex Maintainers <contact@metaplex.com>",
-  "homepage": "https://metaplex.com",
+  "author": "Miraplex Maintainers <contact@miraland.io>",
+  "homepage": "https://miraland.io",
   "repository": {
     "url": "https://github.com/metaplex/beet.git"
   },
