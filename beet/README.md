@@ -159,12 +159,12 @@ const [deserializedTrader] = Trader.struct.deserialize(buf)
 
 ### Struct with non-primitive fields
 
-**NOTE:** depends on `beet-solana` extension package for the `PublicKey` implementation
+**NOTE:** depends on `beet-miraland` extension package for the `PublicKey` implementation
 
 ```ts
-import * as web3 from '@solana/web3.js'
+import * as web3 from '@miraland/web3.js'
 import * as beet from '@miraplex/beet'
-import * as beetSolana from '@metaplex-solarti/beet-solana'
+import * as beetMiraland from '@miraplex/beet-miraland'
 
 type InstructionArgs = {
   instructionDiscriminator: number[]
@@ -176,8 +176,8 @@ type InstructionArgs = {
 const createStruct = new beet.BeetArgsStruct<InstructionArgs>(
   [
     ['instructionDiscriminator', beet.fixedSizeArray(beet.u8, 8)],
-    ['authority', beetSolana.publicKey],
-    ['maybePublickKey', beet.coption(beetSolana.publicKey)],
+    ['authority', beetMiraland.publicKey],
+    ['maybePublickKey', beet.coption(beetMiraland.publicKey)],
   ],
   'InstructionArgs'
 )
@@ -276,7 +276,7 @@ const collectionInfoBeet = beet.dataEnum<CollectionInfoRecord>([
     new beet.FixableBeetArgsStruct<CollectionInfoRecord['V1']>(
       [
         ['symbol', beet.utf8String],
-        ['verifiedCreators', beet.array(beetSolana.publicKey)],
+        ['verifiedCreators', beet.array(beetMiraland.publicKey)],
         ['whitelistRoot', beet.uniformFixedSizeArray(beet.u8, 32)],
       ],
       'CollectionInfoRecord["V1"]'
@@ -286,7 +286,7 @@ const collectionInfoBeet = beet.dataEnum<CollectionInfoRecord>([
   [
     'V2',
     new beet.BeetArgsStruct<CollectionInfoRecord['V2']>(
-      [['collectionMint', beetSolana.publicKey]],
+      [['collectionMint', beetMiraland.publicKey]],
       'CollectionInfoRecord["V2"]'
     ),
   ],

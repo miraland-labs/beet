@@ -4,19 +4,19 @@ import {
   fixedSizeUint8Array,
   SupportedTypeDefinition,
 } from '@miraplex/beet'
-const BEET_SOLANA_PACKAGE = '@metaplex-solarti/beet-solana'
-const SOLANA_WEB3_PACKAGE = '@solarti/web3.js'
+const BEET_MIRALAND_PACKAGE = '@miraplex/beet-miraland'
+const MIRALAND_WEB3_PACKAGE = '@solarti/web3.js'
 
 const uint8Array32 = fixedSizeUint8Array(32)
 
 /**
- * De/Serializer for solana {@link PublicKey}s aka `publicKey`.
+ * De/Serializer for miraland {@link PublicKey}s aka `publicKey`.
  *
  *
  * ## Using PublicKey Directly
  *
  * ```ts
- * import { publicKey } from '@metaplex-solarti/beet-solana'
+ * import { publicKey } from '@miraplex/beet-miraland'
  *
  * const generatedKey  = Keypair.generate().publicKey
  * const buf = Buffer.alloc(publicKey.byteSize)
@@ -27,7 +27,7 @@ const uint8Array32 = fixedSizeUint8Array(32)
  * ## PublicKey as part of a Struct Configuration
  *
  * ```ts
- * import { publicKey } from '@metaplex-solarti/beet-solana'
+ * import { publicKey } from '@miraplex/beet-miraland'
  *
  * type InstructionArgs = {
  *   authority: web3.PublicKey
@@ -41,7 +41,7 @@ const uint8Array32 = fixedSizeUint8Array(32)
  * )
  * ```
  *
- * @category beet/solana
+ * @category beet/miraland
  */
 export const publicKey: FixedSizeBeet<PublicKey> = {
   write: function (buf: Buffer, offset: number, value: PublicKey): void {
@@ -74,7 +74,7 @@ export type KeysTypeMap = Record<
 >
 
 /**
- * Maps solana keys beet exports to metadata which describes in which package it
+ * Maps miraland keys beet exports to metadata which describes in which package it
  * is defined as well as which TypeScript type is used to represent the
  * deserialized value in JavaScript.
  *
@@ -84,8 +84,8 @@ export const keysTypeMap: KeysTypeMap = {
   publicKey: {
     beet: 'publicKey',
     isFixable: false,
-    sourcePack: BEET_SOLANA_PACKAGE,
+    sourcePack: BEET_MIRALAND_PACKAGE,
     ts: 'PublicKey',
-    pack: SOLANA_WEB3_PACKAGE,
+    pack: MIRALAND_WEB3_PACKAGE,
   },
 }

@@ -1,14 +1,14 @@
-# @metaplex-solarti/beet-solana
+# @miraplex/beet-miraland
 
-Solana specific extension for beet, the borsh compatible de/serializer
+Miraland specific extension for beet, the borsh compatible de/serializer
 
 ## API
 
-Please find the [API docs here](https://metaplex-foundation.github.io/beet/docs/beet-solana).
+Please find the [API docs here](https://metaplex-foundation.github.io/beet/docs/beet-miraland).
 
 ## GPA Builders
 
-solana-beet uses `beet`s knowledge about account layouts to provide `GpaBuilder`s for
+miraland-beet uses `beet`s knowledge about account layouts to provide `GpaBuilder`s for
 them which allow to filter by account data size and content.
 
 1. Create a GPA Builder via `const gpaBuilder = GpaBuilder.fromStruct(programId, accountStruct)`
@@ -103,7 +103,7 @@ const account = await gpaBuilder
 
 ## PublicKey
 
-solana-beet provides a de/serializer for solana public keys.
+miraland-beet provides a de/serializer for miraland public keys.
 They can either be used directly or as part of a struct.
 
 ### Examples
@@ -111,7 +111,7 @@ They can either be used directly or as part of a struct.
 #### Using PublicKey Directly
 
 ```ts
-import { publicKey } from '@metaplex-solarti/beet-solana'
+import { publicKey } from '@miraplex/beet-miraland'
 
 const generatedKey  = Keypair.generate().publicKey
 const buf = Buffer.alloc(publicKey.byteSize)
@@ -124,7 +124,7 @@ beet.read(buf, 0) // same as generatedKey
 ```ts
 import * as web3 from '@solarti/web3.js'
 import * as beet from '@miraplex/beet'
-import * as beetSolana from '@metaplex-solarti/beet-solana'
+import * as beetMiraland from '@miraplex/beet-miraland'
 
 type InstructionArgs = {
   authority: web3.PublicKey
@@ -132,7 +132,7 @@ type InstructionArgs = {
 
 const createStruct = new beet.BeetArgsStruct<InstructionArgs>(
   [
-    ['authority', beetSolana.publicKey]
+    ['authority', beetMiraland.publicKey]
   ],
   'InstructionArgs'
 )

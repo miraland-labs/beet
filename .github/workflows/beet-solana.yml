@@ -1,4 +1,4 @@
-name: Build Lint and Test Beet Solana
+name: Build Lint and Test Beet Miraland
 
 on:
   push:
@@ -33,7 +33,7 @@ jobs:
         yarn run build
 
     - name: yarn build, lint and test
-      working-directory: ./beet-solana
+      working-directory: ./beet-miraland
       run: |
         yarn run build
         yarn run lint
